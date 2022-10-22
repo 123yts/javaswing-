@@ -1,5 +1,18 @@
 package com.yts.system.model;
 
+/*
+* 建表sql：
+       *  create table `book`(
+         `number` int(10) not null,
+         `name` varchar(50) not null,
+         `author` varchar(50) not null,
+         `publisher` varchar(50) not null,
+         `price` double(5,2) not null,
+         `borrowed` tinyint(1) not null,
+         primary key(`number`)
+         )ENGINE=INNODB CHARSET=utf8 COLLATE=utf8_general_ci;
+*/
+
 public class Book {
     private int number;
     private String name;
