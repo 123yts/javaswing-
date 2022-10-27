@@ -83,6 +83,13 @@ public class MainView extends JFrame {
     }
 
     private void showPageBtn(int totalCount){
+        System.out.println(totalCount);
+        //没数据不显示按钮
+        if (totalCount == 0) {
+            preBtn.setVisible(false);
+            nextBtn.setVisible(false);
+            return;
+        }
         if (pageNow == 1) preBtn.setVisible(false);
         else preBtn.setVisible(true);
         if (totalCount % pageSize == 0) pageTotalCount = totalCount / pageSize;
